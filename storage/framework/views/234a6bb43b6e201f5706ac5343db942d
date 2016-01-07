@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title><?php echo config('config.application_title') ? : config('constants.APP_NAME'); ?></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<!-- BOOTSTRAP -->
+	<?php echo HTML::style('assets/css/bootstrap.min.css'); ?>
+
+	
+	<?php echo HTML::style('assets/third/select2/css/select2.css'); ?>
+
+	<?php echo HTML::style('assets/css/style.css'); ?>
+
+	<?php echo HTML::style('assets/css/style-responsive.css'); ?>
+
+	<?php echo HTML::style('assets/css/animate.css'); ?>
+
+	<?php echo HTML::style('assets/third/pnotify/pnotify.custom.min.css'); ?>
+
+	<?php echo HTML::style('assets/third/font-awesome/css/font-awesome.min.css'); ?>
+
+	<?php echo HTML::style('assets/third/icheck/skins/flat/blue.css'); ?>
+
+	<?php echo HTML::style('assets/css/custom.css'); ?>
+
+
+	<!-- BODY -->
+	<body class="tooltips full-content">
+	
+	<!-- BEGIN PAGE -->
+	<div class="container">
+	
+		<?php echo $__env->yieldContent('content'); ?>
+
+		
+		<?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div><!-- End div .container -->
+	<!-- END PAGE -->
+
+	<!--
+	================================================
+	JAVASCRIPT
+	================================================
+	-->
+	<!-- Basic Javascripts (Jquery and bootstrap) -->
+	<?php echo HTML::script('assets/js/jquery-1.11.3.min.js'); ?>
+
+	<?php echo HTML::script('assets/js/bootstrap.min.js'); ?> 
+	<?php echo HTML::script('assets/js/jquery.validate.min.js'); ?>
+
+	<?php echo HTML::script('assets/third/pnotify/pnotify.custom.min.js'); ?>
+
+	<?php echo $__env->make('notification', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+	<!-- VENDOR -->
+
+	<!-- Slimscroll js -->
+	<?php echo HTML::script('assets/third/slimscroll/jquery.slimscroll.min.js'); ?>
+
+
+	<!-- Bootstrao selectpicker js -->
+	<?php echo HTML::script('assets/third/select/bootstrap-select.min.js'); ?>
+
+	
+	<!-- Summernote js -->
+	<?php echo HTML::script('assets/third/summernote/summernote.js'); ?>
+
+	
+	<!-- Bootstrap file input js -->
+	<?php echo HTML::script('assets/third/input/bootstrap.file-input.js'); ?>
+
+	
+	<!-- Bootstrao datepicker js -->
+	<?php echo HTML::script('assets/third/datepicker/js/bootstrap-datepicker.js'); ?>
+
+
+	
+	<!-- Icheck js -->
+	<?php echo HTML::script('assets/third/icheck/icheck.min.js'); ?>
+
+	
+	<!-- Form validation js -->
+	<?php echo HTML::script('assets/js/validation-form.js'); ?>
+
+	<?php echo HTML::script('assets/js/wmlab.js'); ?>
+
+	
+    <script>
+	$(document).ready(function() { 
+		Validate.init(); 
+	});
+	</script>
+
+	</body>
+</html>

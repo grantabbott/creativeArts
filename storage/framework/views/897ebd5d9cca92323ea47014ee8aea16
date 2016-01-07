@@ -1,0 +1,17 @@
+<?php if(Session::has('success')): ?>
+    <script>
+    	new PNotify({ 'styling' : 'bootstrap3','title' : 'Success', 'type' : 'success', 'text' : "<?php echo Session::get('success'); ?>" });
+    </script>
+<?php endif; ?>
+
+<?php if(Session::has('errors')): ?>
+    <script>
+        new PNotify({ 'styling' : 'bootstrap3','title' : 'Error', 'type' : 'error', 'text' : "<?php echo Session::get('errors')->First(); ?>" });
+    </script>
+<?php endif; ?>
+
+<?php if(Session::has('status')): ?>
+    <script>
+        new PNotify({ 'styling' : 'bootstrap3','title' : 'Success', 'type' : 'success', 'text' : "<?php echo Session::get('status'); ?>" });
+    </script>
+<?php endif; ?>

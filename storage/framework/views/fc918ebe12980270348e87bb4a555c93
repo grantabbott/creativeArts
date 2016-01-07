@@ -1,0 +1,12 @@
+    <?php $__env->startSection('content'); ?>
+        
+        <!-- Begin 404 Page -->
+        <div class="full-content-center animated bounceIn">
+            <h1>404</h1>
+            <h2><?php echo $exception->getMessage(); ?></h2>
+            <p><?php echo trans('messages.Page not found'); ?></p>
+            <p><?php echo trans('messages.Back to'); ?> <a href="/"><?php echo trans('messages.Dashboard'); ?></a></p>
+        </div>
+        <!-- End 404 Page -->
+    <?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.error', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

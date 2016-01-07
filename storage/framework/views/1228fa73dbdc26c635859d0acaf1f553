@@ -1,0 +1,19 @@
+
+				<!-- Footer -->
+				<footer>
+				&copy; <a href="<?php echo URL::to('/'); ?>"><?php echo config('config.application_name'); ?></a> Version <?php echo config('constants.VERSION').' '.config('config.credit'); ?>
+
+				<p class="pull-right">
+				<?php if(config('config.show_terms_and_conditions')): ?>
+					<a href="/terms-and-conditions">Terms & Conditions</a>
+				<?php endif; ?>
+				<?php if(config('config.show_datetime_in_footer')): ?>
+					<?php echo App\Classes\Helper::showDateTime(date('d M Y,h:i a')); ?> 
+				<?php endif; ?>
+				<?php if(config('config.show_timezone_in_footer')): ?>
+					<strong>Timezone:</strong> <?php echo $default_timezone; ?>
+
+				<?php endif; ?>
+				</p>
+				</footer>
+				<!-- End Footer -->
